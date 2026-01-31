@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edison Chrisnanto html sample pages</title>    
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a href="#skills" class="skip-link">Skip to main content</a>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox viewer" aria-modal="true">
+            <div class="lightbox-content">
+                <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">
+                    <span>&times;</span>
+                </button>
+                <button class="lightbox-prev" onclick="prevImage()" aria-label="Previous image">
+                    <span>&#10094;</span>
+                </button>
+                <img id="lightbox-img" src="" alt="Lightbox image" class="lightbox-image">
+                <button class="lightbox-next" onclick="nextImage()" aria-label="Next image">
+                    <span>&#10095;</span>
+                </button>
+                <div id="lightbox-alt" class="lightbox-caption"></div>
+            </div>
+        </div>
+        <header role="banner">
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav aria-label="Main navigation">
+                <ul id="nav-menu">
+                    <li><a href="#home" tabindex="0" class="nav-link">Home</a></li>
+                    <li><a href="#about" tabindex="0" class="nav-link">About</a></li>
+                    <li><a href="#skills" tabindex="0" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" tabindex="0" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <article id="home" role="article" aria-label="Featured article">
+                <h2>Edison Chrisnanto</h2>
+                <p>I worked as Quality Assurance Manager in a pharmaceutical finished product company. I want to change my career.</p>
+            </article>
+            </header>
+            <section id="about" role="region" aria-label="About me">
+                <h2>About me</h2>
+                <p>I am a beginner as a front end developer</p>
+                <p>I am currently developing my ERP project.</p>
+                <p><a href="https://youtu.be/sDi6vq1gMgY" target="_blank">Watch my ERP project demo</a></p>
+            </section>
+            <section id="portfolio" role="region" aria-label="Portfolio">
+                <h2>My Portfolio</h2>
+                <p>Here are some of my recent projects and work.</p>
+                
+                <!-- Filter Buttons -->
+                <div class="portfolio-filters" role="group" aria-label="Filter portfolio by category">
+                    <button class="filter-btn active" data-filter="all" onclick="filterMyPortfolio('all')">All</button>
+                    <button class="filter-btn" data-filter="html-css" onclick="filterMyPortfolio('html-css')">HTML/CSS</button>
+                    <button class="filter-btn" data-filter="javascript" onclick="filterMyPortfolio('javascript')">JavaScript</button>
+                    <button class="filter-btn" data-filter="responsive" onclick="filterMyPortfolio('responsive')">Responsive Design</button>
+                </div>
+
+                <!-- Portfolio Items -->
+                <div class="portfolio-items">
+                    <article class="portfolio-item" data-category="html-css" role="article" aria-label="Portfolio project - HTML/CSS">
+                        <h3>Personal Website</h3>
+                        <p>A clean and modern personal portfolio website built with HTML5 and CSS3, featuring responsive design and smooth animations.</p>
+                        <figure>
+                            <img src="project-image.jpg" alt="Personal website portfolio project">
+                            <figcaption>Built with HTML5 & CSS3</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="portfolio-item" data-category="javascript" role="article" aria-label="Portfolio project - JavaScript">
+                        <h3>Interactive Dashboard</h3>
+                        <p>A dynamic web application dashboard with interactive charts and data visualization using vanilla JavaScript and DOM manipulation.</p>
+                        <figure>
+                            <img src="project-image.jpg" alt="Interactive dashboard project">
+                            <figcaption>Built with JavaScript</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="portfolio-item" data-category="responsive" role="article" aria-label="Portfolio project - Responsive Design">
+                        <h3>Mobile-First Web App</h3>
+                        <p>A fully responsive web application designed with mobile-first approach, using flexbox and CSS Grid for optimal layout across all devices.</p>
+                        <figure>
+                            <img src="project-image.jpg" alt="Mobile-first web application">
+                            <figcaption>Responsive Design</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="portfolio-item" data-category="html-css" role="article" aria-label="Portfolio project - HTML/CSS">
+                        <h3>E-commerce Landing Page</h3>
+                        <p>A professional e-commerce landing page with CSS animations, gradient backgrounds, and a modern card-based layout design.</p>
+                        <figure>
+                            <img src="project-image.jpg" alt="E-commerce landing page">
+                            <figcaption>Built with HTML5 & CSS3</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="portfolio-item" data-category="javascript" role="article" aria-label="Portfolio project - JavaScript">
+                        <h3>Todo List Application</h3>
+                        <p>A feature-rich todo list app with add, edit, delete, and filter functionality implemented using vanilla JavaScript and local storage.</p>
+                        <figure>
+                            <img src="project-image.jpg" alt="Todo list application">
+                            <figcaption>Built with JavaScript</figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="portfolio-item" data-category="responsive" role="article" aria-label="Portfolio project - Responsive Design">
+                        <h3>Blog Website</h3>
+                        <p>A responsive blog platform with mobile navigation, optimized images, and flexible grid layouts that adapt to all screen sizes.</p>
+                        <figure>
+                            <img src="project-image.jpg" alt="Responsive blog website">
+                            <figcaption>Responsive Design</figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </section>
+
+            <!-- make table to list my skills as a front end developer use ul and li tags -->
+            <section id="skills" role="region" aria-label="Skills">
+                <h2>My Skills</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Design</li>
+                    <li>Version Control (Git)</li>
+                </ul>
+
+            </section>
+
+
+                <form id="contact" aria-label="Contact form" novalidate>
+                    <h2>Contact Me</h2>
+                    
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" name="name" required tabindex="0" aria-describedby="name-error">
+                        <span id="name-error" class="error-message" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" name="email" required tabindex="0" aria-describedby="email-error">
+                        <span id="email-error" class="error-message" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" name="message" rows="4" required tabindex="0" aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-message" role="alert"></span>
+                    </div>
+
+                    <button type="submit" tabindex="0" id="submit-btn">Send Message</button>
+                    <span id="form-success" class="success-message" role="status"></span>
+                </form>
+         <footer role="contentinfo">
+                    <p>&copy; 2026 Sample HTML Page. All rights reserved.</p>
+                </footer>
+        <script src="script.js"></script>
+    </body>
+    
+</html>
